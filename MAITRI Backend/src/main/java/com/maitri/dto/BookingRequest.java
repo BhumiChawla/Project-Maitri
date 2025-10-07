@@ -1,0 +1,126 @@
+package com.maitri.dto;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class BookingRequest {
+    private Long doctorId;
+    private String doctorName;
+    private Long patientId;
+    private String patientName;
+    private String patientEmail;
+    private LocalDate date;
+    private LocalTime time;
+    private String consultationType;
+    private String symptoms;
+    private String notes;
+    private String price;
+    
+    // Constructors
+    public BookingRequest() {}
+    
+    public BookingRequest(Long doctorId, String doctorName, Long patientId, String patientName,
+                         String patientEmail, LocalDate date, LocalTime time, String consultationType,
+                         String symptoms, String notes, String price) {
+        this.doctorId = doctorId;
+        this.doctorName = doctorName;
+        this.patientId = patientId;
+        this.patientName = patientName;
+        this.patientEmail = patientEmail;
+        this.date = date;
+        this.time = time;
+        this.consultationType = consultationType;
+        this.symptoms = symptoms;
+        this.notes = notes;
+        this.price = price;
+    }
+    
+    // Getters and Setters
+    public Long getDoctorId() {
+        return doctorId;
+    }
+    
+    public void setDoctorId(Long doctorId) {
+        this.doctorId = doctorId;
+    }
+    
+    public String getDoctorName() {
+        return doctorName;
+    }
+    
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
+    }
+    
+    public Long getPatientId() {
+        return patientId;
+    }
+    
+    public void setPatientId(Long patientId) {
+        this.patientId = patientId;
+    }
+    
+    public String getPatientName() {
+        return patientName;
+    }
+    
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
+    }
+    
+    public String getPatientEmail() {
+        return patientEmail;
+    }
+    
+    public void setPatientEmail(String patientEmail) {
+        this.patientEmail = patientEmail;
+    }
+    
+    public LocalDate getDate() {
+        return date;
+    }
+    
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+    
+    public LocalTime getTime() {
+        return time;
+    }
+    
+    public void setTime(LocalTime time) {
+        this.time = time;
+    }
+    
+    public String getConsultationType() {
+        return consultationType;
+    }
+    
+    public void setConsultationType(String consultationType) {
+        this.consultationType = consultationType;
+    }
+    
+    public String getSymptoms() {
+        return symptoms;
+    }
+    
+    public void setSymptoms(String symptoms) {
+        this.symptoms = symptoms;
+    }
+    
+    public String getNotes() {
+        return notes;
+    }
+    
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+    
+    public String getPrice() {
+        return price;
+    }
+    
+    public void setPrice(String price) {
+        this.price = price;
+    }
+}

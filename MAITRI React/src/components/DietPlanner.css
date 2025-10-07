@@ -1,0 +1,348 @@
+:root {
+  --primary-color: #e91e63;
+  --secondary-color: #f8bbd9;
+  --text-dark: #2c3e50;
+  --text-light: #6c757d;
+  --bg-light: #f8f9fa;
+}
+
+.diet-header {
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+  padding: 120px 0 40px;
+  text-align: center;
+}
+
+.diet-form-section {
+  background: #f8f9fa;
+  min-height: 80vh;
+}
+
+.diet-form-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.form-header {
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.form-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.section-title {
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.symptom-card {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.symptom-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(233, 30, 99, 0.2);
+}
+
+.symptom-card.selected {
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+}
+
+.symptom-card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.symptom-card span {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.goal-card {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.goal-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(233, 30, 99, 0.2);
+}
+
+.goal-card.selected {
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+}
+
+.goal-card i {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.goal-card span {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+/* Validation-specific goal card states */
+.goal-card.conflicting {
+  border-color: #dc3545;
+  background: #fff5f5;
+  opacity: 0.7;
+}
+
+.goal-card.conflicting:hover {
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  border-color: #dc3545;
+}
+
+.goal-card.age-inappropriate {
+  border-color: #ffc107;
+  background: #fffbf0;
+  opacity: 0.8;
+  position: relative;
+}
+
+.goal-card.age-inappropriate::after {
+  content: "⚠️";
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 16px;
+}
+
+.goal-card.age-inappropriate:hover {
+  cursor: help;
+}
+
+/* Validation warning messages */
+.validation-warning {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 0;
+  color: #856404;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.validation-warning i {
+  margin-right: 8px;
+  color: #ffc107;
+}
+
+/* Consistent styling for all form inputs */
+.form-control, 
+.form-select {
+  border-radius: 15px !important;
+  border: 2px solid #e9ecef !important;
+  padding: 12px 16px !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  background-color: white !important;
+}
+
+.form-control:focus, 
+.form-select:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 0.2rem rgba(233, 30, 99, 0.25) !important;
+  outline: none !important;
+}
+
+.text-pink {
+  color: var(--primary-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #c2185b !important;
+  border-color: #c2185b !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+@media (max-width: 768px) {
+  .diet-form-card {
+    padding: 20px;
+  }
+  
+  .symptoms-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  
+  .goals-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .symptom-card, .goal-card {
+    padding: 15px;
+  }
+  
+  .symptom-card i, .goal-card i {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .diet-header {
+    padding: 100px 0 60px;
+  }
+  
+  .diet-form-card {
+    padding: 15px;
+  }
+  
+  .form-section {
+    padding: 15px;
+  }
+  
+  .goals-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+/* Results Section Styles */
+.diet-results {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.results-header {
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.calories-card {
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.calorie-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 10px 0;
+}
+
+.recommendations-section {
+  margin-bottom: 30px;
+}
+
+.recommendation-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+  border-left: 4px solid var(--primary-color);
+  height: 100%;
+}
+
+.meal-plan-section {
+  margin-bottom: 30px;
+}
+
+.meal-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+  border-left: 4px solid var(--primary-color);
+  height: 100%;
+}
+
+.meal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.meal-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.meal-list li:last-child {
+  border-bottom: none;
+}
+
+.supplements-section {
+  margin-bottom: 30px;
+}
+
+.supplement-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+  border-left: 4px solid var(--primary-color);
+  height: 100%;
+}
+
+/* Data Source Alert Styling */
+.data-source-alert {
+  background-color: #fce4ec !important; /* Light pink background */
+  border: 1px solid #f8bbd9 !important; /* Slightly darker pink border */
+  color: var(--text-dark) !important;
+  border-radius: 10px !important;
+}

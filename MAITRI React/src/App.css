@@ -1,0 +1,1587 @@
+:root {
+    --primary-color: #e91e63;
+    --secondary-color: #f8bbd9;
+    --text-dark: #2c3e50;
+    --text-light: #6c757d;
+    --bg-light: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    padding-top: 0;
+    margin: 0;
+}
+
+.text-pink {
+    color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #c2185b !important;
+    border-color: #c2185b !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    transition: all 0.3s ease;
+    background-color: transparent !important;
+    border-width: 2px;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+    color: white !important;
+}
+
+/* Compact Button Styles */
+.btn-compact {
+    padding: 10px 24px !important;
+    font-size: 0.95rem !important;
+    min-width: 140px !important;
+    max-width: 140px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Navigation */
+.transparent-navbar {
+    background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 15px rgba(233, 30, 99, 0.3);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    z-index: 1030;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+}
+
+.navbar.transparent-navbar.scrolled {
+    background: rgba(233, 30, 99, 0.7) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(233, 30, 99, 0.5);
+}
+
+.transparent-navbar:hover {
+    background: linear-gradient(135deg, #c2185b 0%, #e91e63 100%) !important;
+    box-shadow: 0 4px 20px rgba(233, 30, 99, 0.4);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+}
+
+.navbar-brand .text-pink {
+    color: #ffb3d1 !important;
+    filter: brightness(1.3);
+}
+
+.profile-icon {
+    transition: transform 0.3s ease;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+.profile-icon .text-pink {
+    color: white !important;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.profile-icon:hover .text-pink {
+    color: #ffb3d1 !important;
+    filter: brightness(1.3) drop-shadow(0 3px 6px rgba(0,0,0,0.4));
+}
+
+/* Navigation Links */
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin: 0 10px;
+    padding: 8px 16px !important;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: translateY(-1px);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.navbar-nav .nav-link.active {
+    background-color: rgba(255,255,255,0.2);
+    color: #ffb3d1 !important;
+    font-weight: 600;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none;
+    padding: 4px 8px;
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile Navbar Collapse Styles */
+.navbar-collapse {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        right: 15px;
+        left: auto;
+        width: 250px;
+        z-index: 1000;
+        background: var(--primary-color) !important;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(233, 30, 99, 0.4);
+    }
+    
+    .navbar-nav {
+        padding: 10px 0;
+    }
+    
+    .nav-link {
+        color: white !important;
+        padding: 10px 15px !important;
+        border-radius: 5px;
+        margin: 2px 0;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        color: white !important;
+    }
+    
+    .dropdown-menu {
+        background: rgba(233, 30, 99, 0.95) !important;
+        border: none;
+        margin-top: 5px;
+    }
+    
+    .dropdown-item {
+        color: white !important;
+        padding: 8px 15px;
+    }
+    
+    .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        color: white !important;
+    }
+}
+
+/* Prevent navbar duplication - ensure only one navbar is visible */
+.App .navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 1030 !important;
+    height: 76px !important;
+    min-height: 76px !important;
+    max-height: 76px !important;
+}
+
+/* Ensure no duplicate navbars */
+.App .navbar + .navbar {
+    display: none !important;
+}
+
+/* Force content below navbar */
+.hero-content {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 83px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.hero-image-placeholder {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* Smaller hero sections for Doctors and Community pages */
+.doctors-hero, .community-hero {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+    min-height: 40vh !important;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 76px;
+    padding-bottom: 40px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.doctors-hero h1, .community-hero h1 {
+    color: #2c3e50;
+    /* Use default Bootstrap display-4 size like Diet Planner */
+}
+
+.doctors-hero .lead, .community-hero .lead {
+    color: #6c757d;
+    /* Use default Bootstrap lead size like Diet Planner */
+}
+
+/* Responsive adjustments for smaller hero sections */
+@media (max-width: 768px) {
+    .doctors-hero, .community-hero {
+        min-height: 30vh !important;
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+    
+    .doctors-hero h1, .community-hero h1 {
+        color: #2c3e50;
+        /* Use default Bootstrap responsive sizing like Diet Planner */
+    }
+    
+    .doctors-hero .lead, .community-hero .lead {
+        color: #6c757d;
+        /* Use default Bootstrap responsive sizing like Diet Planner */
+    }
+}
+
+/* Girl Character Styles */
+.girl-character-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    margin-top: 50px;
+}
+
+.cloud-navigation {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.cloud-item {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Arrange clouds in a semicircle */
+.cloud-item:nth-child(1) {
+    top: 60px;
+    left: 8%;
+    animation: float1 3s ease-in-out infinite;
+}
+
+.cloud-item:nth-child(2) {
+    top: 15px;
+    left: 30%;
+    animation: float2 3.5s ease-in-out infinite;
+}
+
+.cloud-item:nth-child(3) {
+    top: 15px;
+    right: 30%;
+    animation: float3 3.2s ease-in-out infinite;
+}
+
+.cloud-item:nth-child(4) {
+    top: 60px;
+    right: 8%;
+    animation: float4 3.8s ease-in-out infinite;
+}
+
+.cloud {
+    background: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(233, 30, 99, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cloud:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+    border-color: var(--primary-color);
+}
+
+.cloud i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.cloud span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.1;
+    text-align: center;
+}
+
+/* Floating animations for clouds */
+@keyframes float1 {
+    0%, 100% { transform: translateY(0px) rotate(-1deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes float2 {
+    0%, 100% { transform: translateY(-5px) rotate(1deg); }
+    50% { transform: translateY(-15px) rotate(-1deg); }
+}
+
+@keyframes float3 {
+    0%, 100% { transform: translateY(0px) rotate(1deg); }
+    50% { transform: translateY(-12px) rotate(-1deg); }
+}
+
+@keyframes float4 {
+    0%, 100% { transform: translateY(-3px) rotate(-1deg); }
+    50% { transform: translateY(-13px) rotate(1deg); }
+}
+
+/* Girl Character */
+.girl-character {
+    position: relative;
+    z-index: 2;
+}
+
+.girl-body {
+    position: relative;
+    width: 200px;
+    height: 380px;
+}
+
+/* Head */
+.head {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.hair {
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    width: 90px;
+    height: 90px;
+    background: #8B4513;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    z-index: 1;
+}
+
+.face {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 70px;
+    height: 70px;
+    background: #FDBCB4;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.eyes {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    width: 40px;
+    height: 10px;
+}
+
+.eye {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #333;
+    border-radius: 50%;
+    animation: blink 4s infinite;
+}
+
+.eye.left { left: 0; }
+.eye.right { right: 0; }
+
+@keyframes blink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+}
+
+.nose {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 3px;
+    background: #E6A8A8;
+    border-radius: 50%;
+}
+
+.mouth {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 8px;
+    border: 2px solid #D2691E;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Body */
+.torso {
+    position: relative;
+    margin-top: 10px;
+}
+
+.neck {
+    width: 20px;
+    height: 15px;
+    background: #FDBCB4;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.shoulders {
+    width: 80px;
+    height: 30px;
+    background: #FF69B4;
+    margin: 5px auto;
+    border-radius: 15px 15px 5px 5px;
+}
+
+.chest {
+    width: 70px;
+    height: 80px;
+    background: #FF69B4;
+    margin: 0 auto;
+    border-radius: 5px 5px 10px 10px;
+}
+
+/* Arms */
+.arms {
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    height: 100px;
+}
+
+.arm {
+    position: absolute;
+    width: 35px;
+    height: 80px;
+}
+
+.left-arm {
+    left: 45px;
+    transform: rotate(-20deg);
+    animation: wave 2s ease-in-out infinite;
+}
+
+.right-arm {
+    right: 45px;
+    transform: rotate(20deg);
+}
+
+.upper-arm {
+    width: 18px;
+    height: 40px;
+    background: #FDBCB4;
+    border-radius: 9px;
+    margin: 0 auto;
+}
+
+.forearm {
+    width: 16px;
+    height: 35px;
+    background: #FDBCB4;
+    border-radius: 8px;
+    margin: 2px auto;
+}
+
+.hand {
+    width: 20px;
+    height: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 20px;
+    margin: 0 auto;
+}
+
+.waving-hand {
+    animation: wave-hand 1s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(-20deg); }
+    50% { transform: rotate(-40deg); }
+}
+
+@keyframes wave-hand {
+    0% { transform: rotate(-10deg); }
+    100% { transform: rotate(10deg); }
+}
+
+/* Waist */
+.waist {
+    width: 60px;
+    height: 40px;
+    background: #4169E1;
+    margin: 10px auto 0;
+    border-radius: 10px 10px 30px 30px;
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(233, 30, 99, 0.2);
+    border-color: var(--secondary-color);
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-image-placeholder {
+    padding: 40px;
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+    border-radius: 20px;
+}
+
+.feature-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.feature-item:last-child {
+    border-bottom: none;
+}
+
+/* Chatbot Styles */
+.chat-container {
+    height: calc(100vh - 76px);
+    margin-top: 76px;
+    padding-top: 0;
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.chat-container .row {
+    width: 100% !important;
+    margin: 0 !important;
+    height: 100%;
+}
+
+.chat-sidebar, .chat-main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: 100%;
+}
+
+.chat-main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-sidebar {
+    background: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    height: 100%;
+    padding: 20px;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.ai-avatar {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+}
+
+.quick-actions h6 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.chat-main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chat-header {
+    background: white;
+    border-bottom: 1px solid #dee2e6;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: between;
+    align-items: center;
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-indicator.online {
+    background: #28a745;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow: hidden;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.message-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+.user-message .message-avatar {
+    background: #6c757d;
+    order: 2;
+}
+
+.message-content {
+    max-width: 70%;
+}
+
+.user-message .message-content {
+    order: 1;
+    text-align: right;
+}
+
+.message-bubble {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 5px;
+}
+
+.user-message .message-bubble {
+    background: var(--primary-color);
+    color: white;
+}
+
+.message-time {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-left: 10px;
+}
+
+.user-message .message-time {
+    text-align: right;
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.chat-input-container {
+    background: white;
+    border-top: 1px solid #dee2e6;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    animation: typing 1.5s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-10px); }
+}
+
+.typing-indicator-text {
+    margin-top: 10px;
+}
+
+/* Diet Planner Styles */
+.diet-header {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+    padding: 120px 0 60px;
+    text-align: center;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.diet-form-section {
+    background: #f8f9fa;
+}
+
+.diet-form-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-header {
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 20px;
+}
+
+.form-section {
+    margin: 30px 0;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.symptom-check, .goal-check {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.symptom-check:hover, .goal-check:hover {
+    background: white;
+    border-color: var(--secondary-color);
+}
+
+.form-check-input:checked ~ .form-check-label {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Diet Results */
+.diet-results {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.calories-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.calorie-number {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.recommendation-card, .meal-card, .supplement-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    height: 100%;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.recommendation-card:hover, .meal-card:hover, .supplement-card:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Doctor Cards */
+.doctor-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    overflow: hidden;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(233, 30, 99, 0.2);
+    border-color: var(--secondary-color);
+}
+
+.doctor-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-footer {
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 15px 20px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+/* Community Styles */
+.community-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.post-card {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.avatar-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.post-title {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.post-content {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Auth Styles */
+.auth-section {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+    min-height: 100vh;
+    padding-top: 76px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.auth-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.auth-header {
+    margin-bottom: 30px;
+}
+
+.auth-image-section {
+    padding: 40px;
+}
+
+.divider {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #dee2e6;
+}
+
+.divider-text {
+    background: white;
+    padding: 0 15px;
+    color: #6c757d;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 90px 0 20px 0;
+        text-align: center;
+        align-items: center;
+        padding-top: 90px;
+        min-height: 70vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    
+    .d-flex.gap-3 {
+        flex-direction: column;
+        gap: 1rem !important;
+    }
+    
+    .btn-lg {
+        width: 100%;
+    }
+    
+    .girl-character-container {
+        height: 400px;
+        margin-top: 30px;
+        transform: scale(0.8);
+    }
+    
+    .cloud-navigation {
+        height: 180px;
+    }
+    
+    .cloud {
+        width: 80px;
+        height: 80px;
+        padding: 15px;
+    }
+    
+    .cloud i {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+    }
+    
+    .cloud span {
+        font-size: 0.65rem;
+    }
+    
+    .about-section .row {
+        flex-direction: column-reverse;
+    }
+    
+    .about-image-placeholder {
+        margin-bottom: 30px;
+    }
+    
+    .transparent-navbar {
+        background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%) !important;
+    }
+    
+    .chat-container {
+        height: auto;
+        min-height: calc(100vh - 76px);
+    }
+    
+    .chat-sidebar {
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .features-section {
+        padding: 60px 0;
+    }
+    
+    .about-section {
+        padding: 60px 0;
+    }
+    
+    .girl-character-container {
+        transform: scale(0.7);
+        height: 350px;
+    }
+    
+    .cloud-navigation {
+        height: 150px;
+    }
+    
+    .cloud {
+        width: 70px;
+        height: 70px;
+        padding: 12px;
+    }
+    
+    .cloud i {
+        font-size: 1.2rem;
+        margin-bottom: 3px;
+    }
+    
+    .cloud span {
+        font-size: 0.6rem;
+    }
+    
+    .auth-card, .diet-form-card, .diet-results {
+        padding: 20px;
+    }
+    
+    .calorie-number {
+        font-size: 2rem;
+    }
+}
+
+/* App Layout Fixes */
+.App {
+    width: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Container overrides to ensure full width */
+.container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+}
+
+/* Ensure sections take full width */
+section {
+    width: 100%;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Fix for Bootstrap containers */
+.hero-section .container,
+.features-section .container,
+.about-section .container,
+.diet-header .container,
+.diet-form-section .container {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Additional layout fixes */
+.container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* Responsive padding for mobile */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Navbar full width fix */
+.navbar .container-fluid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+/* Hero section background should cover full width */
+.hero-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+/* Auth section full width */
+.auth-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+/* Diet header full width */
+.diet-header {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+/* Specific fixes for problematic pages */
+
+/* Chat container full width fix - consolidated into main rule */
+
+.chat-sidebar, .chat-main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.search-card {
+    margin: 0 15px !important;
+}
+
+/* Login page specific fixes */
+.auth-section .container-fluid {
+    width: 100vw !important;
+    max-width: none !important;
+    padding: 0 15px !important;
+}
+
+.auth-section .row {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Override any Bootstrap container restrictions */
+.container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Force full width for all main content */
+main, section, .main-content {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Remove any max-width constraints from Bootstrap */
+@media (min-width: 576px) {
+    .container-sm, .container {
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-md, .container {
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-lg, .container {
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-xl, .container {
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container-xxl, .container {
+        max-width: 100% !important;
+    }
+}
+
+/* Remove Bootstrap's default max-width restrictions */
+.container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+/* Override Bootstrap's responsive breakpoints max-width */
+@media (min-width: 576px) {
+    .container, .container-sm {
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .container, .container-sm, .container-md {
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .container, .container-sm, .container-md, .container-lg {
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+        max-width: 100% !important;
+    }
+}
+
+/* Ensure viewport width utilization */
+.container-fluid {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+}
+
+/* Loading Animation */
+.loading {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Smooth Transitions */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Additional aggressive fixes to eliminate all white space issues */
+
+/* Force all page containers to full width */
+body, html, #root {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.App {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Remove any default margins and paddings that might cause issues */
+* {
+    box-sizing: border-box !important;
+}
+
+/* Ensure all sections take full width */
+section, div[class*="section"] {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Specific fixes for the problematic pages */
+
+/* Login page aggressive fix */
+.auth-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.auth-section * {
+    max-width: 100% !important;
+}
+
+/* Chatbot page rules consolidated into main .chat-container */
+
+/* Doctor page aggressive fix */
+.hero-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Override any Bootstrap max-width constraints completely */
+.container-fluid,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm,
+.container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* Row fixes */
+.row {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Column fixes */
+[class*="col-"] {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    .container-fluid,
+    .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    [class*="col-"] {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+/* Additional chat layout fixes */
+.chat-messages .messages-list {
+    flex: 1;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.chat-messages .messages-content {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Navbar height calculation fix */
+.navbar.fixed-top, .navbar.transparent-navbar {
+    height: 76px !important;
+    min-height: 76px !important;
+    max-height: 76px !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 1030 !important;
+}
+
+/* Ensure chat container starts exactly below navbar */
+.chat-container {
+    margin-top: 76px !important;
+    height: calc(100vh - 76px) !important;
+    min-height: calc(100vh - 76px) !important;
+}
